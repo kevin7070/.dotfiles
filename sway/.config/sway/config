@@ -5,18 +5,23 @@
 # Read `man 5 sway` for a complete reference.
 ### Styling
 # Gaps
-gaps inner 4
+gaps inner 2
 gaps outer 0
 smart_gaps on
 # Borders
 default_border pixel 1
-for_window [class=".*"] border pixel 1
+for_window [class=".*"] border pixel 3
+
 ### Colors
-  # Class                   Border      BG          Text        Indicator   Child border
-  client.focused            #c5c8c6bf   #1d1f21bb   #ffffff     #fffffff2   #c5c8c6bf
-  client.unfocused          #1d1f2166   #1d1f2188   #ffffff     #000000ee   #1d1f2166
-  client.focused_inactive   #c5c8c644   #1d1f2199   #ffffff     #ffffff88   #c5c8c644
-  client.background         #1d1f21f2
+# Set colors
+set $bg #171717
+set $fg #eff1f5
+set $br #ffcc00
+# Class                   Border      BG          Text        Indicator   Child border
+client.focused            $br         $br         $fg         $bg         $br
+client.focused_inactive   $bg         $bg         $fg         $bg         $bg
+client.unfocused          $bg         $bg         $fg         $bg         $bg
+client.background         $bg
 
 ### Variables
 #
